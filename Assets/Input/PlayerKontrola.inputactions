@@ -21,7 +21,7 @@
                     "id": "86968365-e0e3-40b8-9fc8-31e3be17b68d",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -140,7 +140,18 @@
                     "name": "",
                     "id": "896a0019-bdba-4893-8b56-c470ab62e927",
                     "path": "<Mouse>/rightButton",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90b3916d-dd92-4cd4-a7cb-e622555005b1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
