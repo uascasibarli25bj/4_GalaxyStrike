@@ -21,6 +21,7 @@ public class PlayerWeapon : MonoBehaviour
         ProcessFiring();
         MugituJoPuntua();
         MugituTargetPoint();
+        AimLasers();
     }
 
     public void OnFire(InputValue value)
@@ -47,27 +48,15 @@ public class PlayerWeapon : MonoBehaviour
         Vector3 targetPointPosition = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, targetDistance);
         targetPoint.position = Camera.main.ScreenToWorldPoint(targetPointPosition);
     }
-    
-    // public ParticleSystem laser1;
-    // public ParticleSystem laser2;
 
-    // void Start()
-    // {
-    //     laser1.Stop();
-    //     laser2.Stop();
-    // }
+    void AimLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            Vector3 fireDirection = targetPoint.position - transform.position;
+            Quaternion rotationTarget = Quaternion.LookRotation(fireDirection);
 
-    // public void OnFire(InputValue value)
-    // {
-    //     if (value.isPressed)
-    //     {
-    //         laser1.Play();
-    //         laser2.Play();
-    //     }
-    //     else
-    //     {
-    //         laser1.Stop();
-    //         laser2.Stop();
-    //     }
-    // }
+            laser.transform.rotation = rotationTarget;
+        }
+    }
 }
