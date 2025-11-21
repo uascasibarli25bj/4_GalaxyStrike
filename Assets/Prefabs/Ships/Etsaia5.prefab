@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: lives
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -6802507247062909426, guid: 85eb157f6417af04dbfccb7f0e95c502, type: 3}
+      propertyPath: scorePoints
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2284711467140725451, guid: 85eb157f6417af04dbfccb7f0e95c502, type: 3}
       propertyPath: m_LocalPosition.x
       value: -300

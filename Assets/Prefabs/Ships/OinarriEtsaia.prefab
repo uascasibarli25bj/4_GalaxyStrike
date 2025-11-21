@@ -122,8 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1735ff9fb40664e9ac324a6b1c4deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Etsaia
-  lives: 1
+  lifes: 1
   suntsituVFX: {fileID: 7896902933436917371, guid: d50f4ca600a60fb43bf43c33964bc63f, type: 3}
+  scorePoints: 0
 --- !u!1 &9006530268552785138
 GameObject:
   m_ObjectHideFlags: 0

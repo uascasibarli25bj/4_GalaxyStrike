@@ -1,16 +1,18 @@
+using TMPro;
 using UnityEngine;
 
 public class Scoreboard : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    int score = 0;
+    [SerializeField] private TextMeshProUGUI puntuazioTextua;
+    public void ScoreHit(int scorePerHit)
     {
-        
+        score += scorePerHit;
+        UpdateScoreText();
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateScoreText()
     {
-        
+        puntuazioTextua.text = score.ToString();
     }
 }
