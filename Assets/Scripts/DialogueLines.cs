@@ -14,3 +14,4 @@ public class DialogueLines : MonoBehaviour
         dialogueText.text = timelineTextLines[currentLineIndex];
     }
 }
+
