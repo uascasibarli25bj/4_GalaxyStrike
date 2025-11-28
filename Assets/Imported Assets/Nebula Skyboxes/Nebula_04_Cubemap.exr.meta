@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f2534a0c318d54f4b92555b9e652ad36
+guid: 45986359cd57e5f4b9159ede22d39777
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,10 +106,3 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 219924
-  packageName: Nebula Skyboxes
-  packageVersion: 1.0
-  assetPath: Assets/Nebula Skyboxes/Nebula_04_Cubemap.exr
-  uploadId: 494207
