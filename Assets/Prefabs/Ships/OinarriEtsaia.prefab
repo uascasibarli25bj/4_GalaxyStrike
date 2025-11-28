@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Etsaia
   lifes: 1
   suntsituVFX: {fileID: 7896902933436917371, guid: d50f4ca600a60fb43bf43c33964bc63f, type: 3}
+  suntsituSound: {fileID: 8300000, guid: 459eebbf76fdb454b993f372064850b9, type: 3}
   scorePoints: 0
 --- !u!1 &9006530268552785138
 GameObject:

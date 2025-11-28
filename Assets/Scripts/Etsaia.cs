@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Etsaia : MonoBehaviour
 {
     [SerializeField] float lifes = 1;
     [SerializeField] GameObject suntsituVFX;
+    [SerializeField] AudioClip suntsituSound;
 
     [SerializeField] int scorePoints = 20;
     Scoreboard scoreboard;
@@ -26,6 +28,8 @@ public class Etsaia : MonoBehaviour
         {
             Instantiate(suntsituVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
+            AudioSource.PlayClipAtPoint(suntsituSound, Camera.main.transform.position, 2f);
 
             scoreboard.ScoreHit(scorePoints);
         }
