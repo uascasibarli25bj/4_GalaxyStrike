@@ -45,25 +45,9 @@ public class PlayerWeapon : MonoBehaviour
 
     void MugituTargetPoint()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, targetDistance))
-        {
-            targetPoint.position = hit.point;
-        }
-        else
-        {
-            targetPoint.position = ray.GetPoint(targetDistance);
-        }
+        Vector3 targetPointPosition = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, targetDistance);
+        targetPoint.position = Camera.main.ScreenToWorldPoint(targetPointPosition);
     }
-
-
-    // void MugituTargetPoint()
-    // {
-    //     Vector3 targetPointPosition = new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, targetDistance);
-    //     targetPoint.position = Camera.main.ScreenToWorldPoint(targetPointPosition);
-    // }
 
     void AimLasers()
     {

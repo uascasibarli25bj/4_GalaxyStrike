@@ -3135,7 +3135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2072443895
 Transform:
   m_ObjectHideFlags: 0
@@ -3287,9 +3287,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23851237903669953, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059261540680363102, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4031966243888731488, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
       propertyPath: m_Name
       value: PlayerRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4031966243888731488, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4508553542032259016, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
       propertyPath: joPuntua
@@ -3298,6 +3310,10 @@ PrefabInstance:
     - target: {fileID: 4508553542032259016, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
       propertyPath: targetDistance
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508553542032259016, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
+      propertyPath: raycastMask.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6061003529646840966, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3350,6 +3366,10 @@ PrefabInstance:
     - target: {fileID: 8141648256993724068, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
       propertyPath: m_TaaSettings.m_ContrastAdaptiveSharpening
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939789168175076693, guid: b27d14da3cdd18b40935d897c70740a2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
