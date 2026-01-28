@@ -42,7 +42,6 @@ public class PlayerMugimendua : MonoBehaviour
 
     public void EnableReset()
     {
-        Debug.Log("Reset Enabled");
         canReset = true;
     }
 
@@ -55,8 +54,6 @@ public class PlayerMugimendua : MonoBehaviour
     public void OnReset()
     {
         if (!canReset) return;
-
-        Debug.Log("Reset Input Received");
 
         SceneManager.LoadScene(0);
     }
