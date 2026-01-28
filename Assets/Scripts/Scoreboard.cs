@@ -4,7 +4,8 @@ using UnityEngine;
 public class Scoreboard : MonoBehaviour
 {
     int score = 0;
-    [SerializeField] private TextMeshProUGUI puntuazioTextua;
+    [SerializeField] private TextMeshPro puntuazioTextua;
+    [SerializeField] private TextMeshPro endScoreboard;
     public void ScoreHit(int scorePerHit)
     {
         score += scorePerHit;
@@ -14,5 +15,9 @@ public class Scoreboard : MonoBehaviour
     void UpdateScoreText()
     {
         puntuazioTextua.text = score.ToString();
+        endScoreboard.text = 
+            "YOUR  SCORE: \n" +
+            "____________\n\n\n" +
+            score.ToString();
     }
 }

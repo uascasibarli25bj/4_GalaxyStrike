@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMugimendua : MonoBehaviour
 {
@@ -12,7 +14,37 @@ public class PlayerMugimendua : MonoBehaviour
     [SerializeField] float xClampRange = 10f;
     [SerializeField] float yClampRange = 10f;
 
+    [Header("Reset Sistema")]
+    [SerializeField] GameObject playerShip;
+    [SerializeField] AnimationController animationController;
+
     Vector2 moveInput;
+    public bool canMove = true;
+    public bool canReset = false;
+
+    void Awake()
+    {
+        gameObject.SetActive(true);
+        playerShip.SetActive(true);
+        canMove = true;
+        canReset = false;
+    }
+
+    public void DisableControlls()
+    {
+        canMove = false;
+    }
+    
+    public void DisableShip()
+    {
+        playerShip.SetActive(false);
+    }
+
+    public void EnableReset()
+    {
+        Debug.Log("Reset Enabled");
+        canReset = true;
+    }
 
     void Update()
     {
@@ -20,14 +52,20 @@ public class PlayerMugimendua : MonoBehaviour
         ProcessRotation();
     }
 
-    public void OnMugitu(InputValue value)
+    public void OnReset()
     {
-        moveInput = value.Get<Vector2>();
+        if (!canReset) return;
+
+        Debug.Log("Reset Input Received");
+
+        SceneManager.LoadScene(0);
     }
 
-    public void OnFire(InputValue value)
+    public void OnMugitu(InputValue value)
     {
-        
+        if (!canMove) return;
+
+        moveInput = value.Get<Vector2>();
     }
 
     public void ProcessTraslation()

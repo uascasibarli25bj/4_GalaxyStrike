@@ -11,6 +11,18 @@ public class PlayerWeapon : MonoBehaviour
 
     bool isFiring = false;
 
+    void Awake()
+    {
+        joPuntua.gameObject.SetActive(true);
+        targetPoint.gameObject.SetActive(true);
+    }
+
+    public void DisableLasers()
+    {
+        joPuntua.gameObject.SetActive(false);
+        targetPoint.gameObject.SetActive(false);
+    }
+
     void Start()
     {
         Cursor.visible = false;
