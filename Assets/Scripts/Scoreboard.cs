@@ -17,7 +17,7 @@ public class Scoreboard : MonoBehaviour
         puntuazioTextua.text = score.ToString();
         endScoreboard.text = 
             "YOUR  SCORE: \n" +
-            "____________\n\n\n" +
+            "____________\n\n" +
             score.ToString();
     }
 }
